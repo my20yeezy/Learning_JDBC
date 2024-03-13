@@ -1,4 +1,3 @@
-
 import util.DataTransferObject;
 
 public class Customer implements DataTransferObject {
@@ -15,7 +14,7 @@ public class Customer implements DataTransferObject {
 
     @Override
     public long getId() {
-        return id;
+        return 0;
     }
 
     public void setId(long id) {
@@ -84,5 +83,20 @@ public class Customer implements DataTransferObject {
 
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipcode='" + zipcode + '\'' +
+                '}';
     }
 }

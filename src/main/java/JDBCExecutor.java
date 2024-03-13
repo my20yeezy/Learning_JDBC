@@ -11,23 +11,38 @@ public class JDBCExecutor {
         try {
             Connection connection = dcm.getConnection();
             CustomerDAO customerDAO = new CustomerDAO(connection);
-            Customer customer = new Customer();
-            customer.setFirstName("Aktan_new");
-            customer.setLastName("Mukanov");
-            customer.setEmail("yerniyaz@mail.kz");
-            customer.setPhone("7-777-777-7777");
-            customer.setAddress("777 Uly dala av");
-            customer.setCity("Astana");
-            customer.setState("Astana");
-            customer.setZipcode("010000");
-            //testing git
-            customerDAO.create(customer);
+
+            customerDAO.delete(10006);
+
+//            Customer customer = customerDAO.findById(10006);
+//            System.out.println(customer.getFirstName() + " " + customer.getLastName());
+//            customer.setLastName("Mukan");
+//            customer = customerDAO.update(customer);
+//            System.out.println(customer.getFirstName() + " " + customer.getLastName());
+
+//            Customer customer = customerDAO.findById(10001);
+//            System.out.println(customer.getFirstName() + " " + customer.getLastName());
+
+
+//            Customer customer = new Customer();
+//            customer.setFirstName("Aktan_new");
+//            customer.setLastName("Mukanov");
+//            customer.setEmail("yerniyaz@mail.kz");
+//            customer.setPhone("7-777-777-7777");
+//            customer.setAddress("777 Uly dala av");
+//            customer.setCity("Astana");
+//            customer.setState("Astana");
+//            customer.setZipcode("010000");
+//            customerDAO.create(customer);
+
 
 //            Statement statement = connection.createStatement();
 //            ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM CUSTOMER");
 //            while (resultSet.next()) {
 //                System.out.println(resultSet.getInt(1));
 //            }
+
+
         } catch(SQLException e) {
             e.printStackTrace();
         }
