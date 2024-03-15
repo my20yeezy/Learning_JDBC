@@ -12,13 +12,20 @@ public class JDBCExecutor {
             Connection connection = dcm.getConnection();
             CustomerDAO customerDAO = new CustomerDAO(connection);
 
-            customerDAO.delete(10006);
+//            customerDAO.findAllSorted(20).forEach(System.out::println);
+//            System.out.println("Paged:");
+//            for (int i = 1; i < 3; i++) {
+//                System.out.println("Page number: " + i);
+//                customerDAO.findAllPaged(10, i).forEach(System.out::println);
+//            }
 
-//            Customer customer = customerDAO.findById(10006);
-//            System.out.println(customer.getFirstName() + " " + customer.getLastName());
-//            customer.setLastName("Mukan");
-//            customer = customerDAO.update(customer);
-//            System.out.println(customer.getFirstName() + " " + customer.getLastName());
+//            customerDAO.delete(10006);
+
+            Customer customer = customerDAO.findById(10001);
+            System.out.println(customer.getFirstName() + " " + customer.getLastName());
+            customer.setLastName("Mukan");
+            customer = customerDAO.update(customer);
+            System.out.println(customer.getFirstName() + " " + customer.getLastName());
 
 //            Customer customer = customerDAO.findById(10001);
 //            System.out.println(customer.getFirstName() + " " + customer.getLastName());
